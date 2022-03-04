@@ -5,32 +5,32 @@ var outputDiv = document.querySelector("#output");
 var userName = ("Give your name");
 var welcomeMessage = ("Welcome ", userName);
 
-var outputDiv = txtInput.value;
 var year = txtInput.value;
 function checkLeapYear(year) {
     var userAge = txtInput.value; 
 
     var yyyy = Number(userAge);
       if (userAge != yyyy ) {
-         console.log("check your text");
+         return outputDiv.innerText = "check your text";
+
        } else {
         if((year % 400 == 0) && (year % 100 == 0) || (year % 4 == 0))
       {
-         alert("its a leap year")
-         return
-        // console.log("its leap year")
+        
+         outputDiv.innerText = "its a leap year";
+         
       } else {
-         alert("not a leap yeaer")
-         return
-    }
- }
- checkLeapYear(year);
-
-}
-function clickHandler() {
-        outputDiv.innerText = checkLeapYear(year);
-        //  console.log(outputDiv.innerText);
+         outputDiv.innerText = "not a leap year"
+         
+    } 
     
+ } 
+ checkLeapYear(year); 
+} 
+
+function clickHandler() {
+         outputDiv.innerText = checkLeapYear(year); return
+             
 }
 
 
